@@ -1,0 +1,16 @@
+@mixin flex($a, $j) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+}
+
+@mixin center() {
+    @include flex(center, center);
+}
+
+@mixin media($size) {
+    @media screen and (max-width: #{$size}px) {
+        @content;
+    }
+}
+

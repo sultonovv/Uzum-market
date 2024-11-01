@@ -1,0 +1,104 @@
+.card{
+    width: 245px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &-image{
+        z-index: 10;
+        width: 100%;
+        overflow: hidden;
+        height: 300px;
+        border-radius: 8px;
+        img{
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: scale 300ms;
+        }
+    }
+    &-content{
+        width: 100%;
+        height: auto;
+        padding: 10px ;
+        row-gap: 2px;
+        display: flex;
+        flex-direction: column;
+        z-index: 11;
+        h2{
+            font-size: 16px;
+            font-weight: 500;
+        }
+        del{
+            font-size: 12px;
+        }
+        .price{
+            width: fit-content;
+            border: none;
+            border-radius: 4px;
+            height: auto;
+            padding: 5px 10px;
+            background-color: gold;
+            font-size: 14px;
+        }
+        span{
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            padding: 10px 0;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    &:hover img{
+        scale: 105%;    
+    }
+    &:hover &-content{
+        -webkit-box-shadow: 5px 5px 6px -1px rgba(209,201,209,0.87);
+        -moz-box-shadow: 5px 5px 6px -1px rgba(209,201,209,0.87);
+        box-shadow: 4px 5px 8px -1px rgba(209,201,209,0.87);
+        
+    transition: all 0.3s ease-out;
+    }
+    &-buttons{
+        width: fit-content;
+        height: 100%;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        button:first-child{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgb(206, 206, 206);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                background-color: rgb(184, 179, 179);
+            }
+        }
+        .cart-saved{
+            z-index: 100;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid rgb(206, 206, 206);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                background-color: rgb(184, 179, 179);
+            }
+        }
+    }
+}
